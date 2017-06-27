@@ -1,0 +1,5 @@
+ $cofee_of_the_months = new WP_Query(['meta_key' => 'cofee-of-the-months',
+                    'meta_value' => '1']);
+                $id = $cofee_of_the_months->posts[0]->ID;
+
+                $all_posts = new WP_Query(['post__not_in' => [$id]]);
